@@ -1,0 +1,63 @@
+# InSAR Subsidence Analysis - .gitignore
+
+# Large data files
+data/raw/*.npz
+data/processed/*.npz
+data/processed/*.pkl
+*.mat
+*.h5
+*.hdf5
+
+# Temporary processing files
+temp/
+scratch/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Large result files (>100MB)
+*_full_results.npz
+*_batch_*.pkl
+
+# Keep smaller results for version control
+!*_subset_results.npz
+!*_sample_*.npz
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment files
+.env
+.venv
+env/
+venv/
+
+# Log files
+*.log
+
+# Figures (keep selected ones)
+figures/temp_*.png
+figures/debug_*.png
+
+# Keep important figures for documentation
+!figures/ps02c_enhanced_*.png
+!figures/ps01_*.png
+!figures/README_*.png
