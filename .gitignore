@@ -1,9 +1,9 @@
 # InSAR Subsidence Analysis - .gitignore
 
-# Large data files
-data/raw/*.npz
-data/processed/*.npz
-data/processed/*.pkl
+# Data files - exclude ALL data unless explicitly added
+data/
+*.npz
+*.pkl
 *.mat
 *.h5
 *.hdf5
@@ -16,14 +16,6 @@ __pycache__/
 *.pyo
 *.pyd
 .Python
-
-# Large result files (>100MB)
-*_full_results.npz
-*_batch_*.pkl
-
-# Keep smaller results for version control
-!*_subset_results.npz
-!*_sample_*.npz
 
 # IDE and editor files
 .vscode/
@@ -53,11 +45,10 @@ venv/
 # Log files
 *.log
 
-# Figures (keep selected ones)
-figures/temp_*.png
-figures/debug_*.png
-
-# Keep important figures for documentation
-!figures/ps02c_enhanced_*.png
-!figures/ps01_*.png
-!figures/README_*.png
+# Figures - exclude ALL figures unless explicitly added
+figures/
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.svg
